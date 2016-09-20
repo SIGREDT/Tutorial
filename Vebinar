@@ -1,0 +1,42 @@
+<meta charset = "utf-8">
+<script>
+	var player1 = prompt('Вы первый игрок. Введите ваше имя: ');
+	var player2 = prompt('Вы второй игрок. Введите ваше имя: ');
+	var answer = parseInt(Math.random() * 100);
+	var i = 0;
+	do {
+		var userAnswer = prompt('Ходит ' + player1 + '.\n' + 'Введите число от 0 до 100. Для выхода нажмите q');
+			if (userAnswer == 'q') {
+		break;
+		}
+		userAnswer = parseInt(userAnswer);
+			if (userAnswer > answer) {
+		alert('Ваш ответ слишком большой');
+		} 	else if (userAnswer < answer) {
+		alert('Ваш ответ слишком маленький');
+		}	else if (userAnswer == answer) {
+		alert('Вы угадали! Победил ' + player1);
+		break;
+		}	
+			else {
+		alert('Необходимо ввести число!');
+		}
+		var userAnswer = prompt('Ходит ' + player2 + '.\n' + 'Введите число от 0 до 100. Для выхода нажмите q');
+			if (userAnswer == 'q') {
+		break;
+		}
+		userAnswer = parseInt(userAnswer);
+			if (userAnswer > answer) {
+		alert('Ваш ответ слишком большой');
+		} 	else if (userAnswer < answer) {
+		alert('Ваш ответ слишком маленький');
+		}	else if (userAnswer == answer) {
+		alert('Вы угадали! Победил ' + player1);
+			break;
+		}	
+			else {
+		alert('Необходимо ввести число!');
+		}
+		i++;
+	}		while (userAnswer != answer)
+</script>
